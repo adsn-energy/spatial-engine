@@ -1,0 +1,36 @@
+ADSN SPATIAL ENGINE - THIRD-PARTY NOTICES
+
+The ADSN Spatial Engine is proprietary software of ADSN Energy & Infrastructure. It is built with, and works
+alongside, the open-source components below. Each component is licensed to you under its own licence, whose full
+text is available at the address given. These licences govern those components; the ADSN licence agreement does
+not restrict any right they give you.
+
+A. COMPONENTS COMPILED INTO THE ENGINE
+  Python runtime             Python Software Foundation License 2.0     https://docs.python.org/3/license.html
+  Nuitka runtime support     Apache License 2.0                         https://github.com/Nuitka/Nuitka
+  NumPy                      BSD 3-Clause (bundles OpenBLAS: BSD 3-Clause;
+                             GCC runtime libraries: GPL-3.0 with the GCC Runtime Library Exception)
+                                                                        https://numpy.org/doc/stable/license.html
+  SciPy                      BSD 3-Clause (bundled libraries as listed in SciPy's LICENSE)
+                                                                        https://github.com/scipy/scipy/blob/main/LICENSE.txt
+  Pillow                     MIT-CMU (HPND) License                     https://github.com/python-pillow/Pillow/blob/main/LICENSE
+  OpenCV (opencv-python-headless)  Apache License 2.0                   https://github.com/opencv/opencv-python
+    including FFmpeg (opencv_videoio_ffmpeg), LGPL-2.1-or-later, dynamically linked as a separate,
+    replaceable library. FFmpeg source: https://ffmpeg.org/download.html
+  trimesh                    MIT License                                https://github.com/mikedh/trimesh
+  SQLite                     Public domain                              https://sqlite.org/copyright.html
+  OpenSSL                    Apache License 2.0                         https://www.openssl.org/source/license.html
+  zlib / libjpeg-turbo / libpng / libtiff / libwebp (via Pillow and OpenCV) - their permissive licences as
+    distributed with those packages.
+
+B. PROGRAMS DOWNLOADED ON YOUR REQUEST AND RUN AS SEPARATE, UNMODIFIED PROGRAMS
+  COLMAP                     BSD 3-Clause License                       https://github.com/colmap/colmap
+  OpenMVS                    GNU Affero General Public License v3.0     https://github.com/cdcseacave/openMVS
+    OpenMVS is not part of the ADSN Spatial Engine and is not modified by ADSN. Its complete source code is
+    available at the address above, under the AGPL-3.0.
+
+C. OPTIONAL TOOLS USED WHEN YOU HAVE INSTALLED THEM YOURSELF
+  Ollama (local AI service)  MIT License                                https://github.com/ollama/ollama
+  Nerfstudio / gsplat        Apache License 2.0                         https://github.com/nerfstudio-project
+
+The names of these projects are the property of their respective owners and are used only to identify them.
