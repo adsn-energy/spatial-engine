@@ -1,0 +1,2 @@
+ADSN_Spatial_Engine_Setup.exe  version 0.9.6
+SHA-256 6876630f087be64faf880e3ada9d05f73e4a047ff85891455a342fca45b8c220
