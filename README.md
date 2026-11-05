@@ -5,7 +5,7 @@ alignment and local AI tasks on your own Windows PC and graphics card. Your phot
 
 ## Install
 
-1. **[Download ADSN_Spatial_Engine_Setup.exe](https://github.com/adsn-energy/spatial-engine/raw/main/download/ADSN_Spatial_Engine_Setup.exe)** (Windows 10/11, 64-bit).
+1. **[Download ADSN_Spatial_Engine_Setup.exe](https://github.com/adsn-energy/spatial-engine/releases/download/v0.9.8/ADSN_Spatial_Engine_Setup_0.9.8.exe)** (Windows 10/11, 64-bit).
 2. Open it, accept the licence agreement and click **Next** until it finishes.
 3. In [IntegraTwin](https://integratwin.adsnenergy.com), start any 3D Reconstruction, Gaussian Splatting or
    360 Tour *Build cameras* task. IntegraTwin starts the engine and connects to it automatically.
@@ -21,3 +21,6 @@ To remove it: Windows Settings › Apps › ADSN Spatial Engine › Uninstall.
 Only the compiled installer ([download/](download)), the
 [licence agreement](EULA.txt) and the [third-party notices](THIRD_PARTY_NOTICES.txt). The engine is proprietary
 software of ADSN Energy & Infrastructure; its source code is not published.
+
+
+Current release: **0.9.8**. Includes Gaussian Stop & save, checkpoint resume, integrated Nerfstudio installation/progress and runtime helper packaging. [Release notes and verified installer](https://github.com/adsn-energy/spatial-engine/releases/tag/v0.9.8).
