@@ -1,0 +1,44 @@
+name: Publish verified native 0.9.9 installer
+on:
+  push:
+    branches: [release/native-0.9.9]
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reassemble exact verified compiled installer
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,re
+          from pathlib import Path
+          root=Path('release-parts/0.9.9')
+          manifest=json.loads((root/'manifest.json').read_text())
+          assert manifest['version']=='0.9.9'
+          assert manifest['name']=='ADSN_Spatial_Engine_Setup_0.9.9.exe'
+          output=Path(manifest['name'])
+          with output.open('wb') as stream:
+              for part in manifest['parts']:
+                  assert re.fullmatch(r'part\d{3}\.bin',part['name'])
+                  data=(root/part['name']).read_bytes()
+                  assert len(data)==part['size']
+                  assert hashlib.sha256(data).hexdigest()==part['sha256']
+                  stream.write(data)
+          assert output.stat().st_size==manifest['size']
+          assert hashlib.sha256(output.read_bytes()).hexdigest()==manifest['sha256']
+          print('Verified compiled installer:',output.name,manifest['size'],manifest['sha256'])
+          PY
+      - name: Publish installer and independently download asset
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if ! gh release view v0.9.9 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release create v0.9.9 ADSN_Spatial_Engine_Setup_0.9.9.exe --repo "$GITHUB_REPOSITORY" --target main --title "ADSN Spatial Engine 0.9.9 — connected camera groups" --notes-file release-parts/0.9.9/NOTES.md
+          fi
+          mkdir downloaded
+          gh release download v0.9.9 --repo "$GITHUB_REPOSITORY" --pattern ADSN_Spatial_Engine_Setup_0.9.9.exe --dir downloaded
+          cmp ADSN_Spatial_Engine_Setup_0.9.9.exe downloaded/ADSN_Spatial_Engine_Setup_0.9.9.exe
+          echo 'Published asset matches the verified MSI build byte for byte.'
