@@ -32,7 +32,7 @@ The Software includes or downloads third-party components that are licensed to y
 listed in THIRD_PARTY_NOTICES.txt. Those licences govern those components. Nothing in this agreement limits any
 right you have under them, and section 3 does not apply to them.
 
-On your request, the Software downloads COLMAP and OpenMVS from their official public releases. They run as
+When it first starts, the Software downloads COLMAP and OpenMVS from their official public releases. They run as
 separate, unmodified programs under their own licences.
 
 5. OWNERSHIP
@@ -42,8 +42,8 @@ granted are reserved.
 6. YOUR DATA AND PRIVACY
 Your photos, videos, models and results are yours. The Software processes them on your computer and does not
 send them to ADSN. It accepts instructions only from IntegraTwin pages you have paired with it, and listens only
-on this computer (127.0.0.1). It connects to the internet only to download the components you ask it to install
-(from github.com and the providers named in THIRD_PARTY_NOTICES.txt). It contains no advertising, no tracking and
+on this computer (127.0.0.1). It connects to the internet only to download COLMAP and OpenMVS on first start and the
+components you ask it to install (from github.com and the providers named in THIRD_PARTY_NOTICES.txt). It contains no advertising, no tracking and
 no usage telemetry. Results reach IntegraTwin only when you open or import them there.
 
 7. ENGINEERING RESULTS

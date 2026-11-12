@@ -18,18 +18,27 @@ A. COMPONENTS COMPILED INTO THE ENGINE
     including FFmpeg (opencv_videoio_ffmpeg), LGPL-2.1-or-later, dynamically linked as a separate,
     replaceable library. FFmpeg source: https://ffmpeg.org/download.html
   trimesh                    MIT License                                https://github.com/mikedh/trimesh
+  ONNX Runtime               MIT License                                https://github.com/microsoft/onnxruntime
+  scikit-image               BSD 3-Clause License                       https://github.com/scikit-image/scikit-image
+  pycolmap / COLMAP bindings BSD 3-Clause License                       https://github.com/colmap/pycolmap
   SQLite                     Public domain                              https://sqlite.org/copyright.html
   OpenSSL                    Apache License 2.0                         https://www.openssl.org/source/license.html
   zlib / libjpeg-turbo / libpng / libtiff / libwebp (via Pillow and OpenCV) - their permissive licences as
     distributed with those packages.
 
-B. PROGRAMS DOWNLOADED ON YOUR REQUEST AND RUN AS SEPARATE, UNMODIFIED PROGRAMS
+B. PROGRAMS DOWNLOADED AUTOMATICALLY ON FIRST START AND RUN AS SEPARATE, UNMODIFIED PROGRAMS
   COLMAP                     BSD 3-Clause License                       https://github.com/colmap/colmap
   OpenMVS                    GNU Affero General Public License v3.0     https://github.com/cdcseacave/openMVS
     OpenMVS is not part of the ADSN Spatial Engine and is not modified by ADSN. Its complete source code is
     available at the address above, under the AGPL-3.0.
 
-C. OPTIONAL TOOLS USED WHEN YOU HAVE INSTALLED THEM YOURSELF
+  Depth Anything V2 Small    Apache License 2.0 (model weights, ONNX export by onnx-community)
+                                                                        https://huggingface.co/depth-anything/Depth-Anything-V2-Small
+    Included in the installer (originally from huggingface.co, checked against a pinned SHA-256) and run by
+    ONNX Runtime. The larger Depth Anything V2 models have a non-commercial licence and
+    are not used.
+
+C. OPTIONAL LOCAL TOOLS (NERFSTUDIO CAN ALSO BE INSTALLED ON YOUR REQUEST)
   Ollama (local AI service)  MIT License                                https://github.com/ollama/ollama
   Nerfstudio / gsplat        Apache License 2.0                         https://github.com/nerfstudio-project
 
